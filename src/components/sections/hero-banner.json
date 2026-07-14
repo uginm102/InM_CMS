@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_sections_hero_banners",
+  "info": {
+    "displayName": "hero-banner"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "searchPlaceholder": {
+      "type": "string",
+      "required": true
+    },
+    "searchButtonText": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

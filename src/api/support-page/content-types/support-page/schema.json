@@ -45,6 +45,16 @@
       },
       "component": "shared.footer",
       "repeatable": false
+    },
+    "links": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.icon-link",
+      "repeatable": true
     }
   }
 }

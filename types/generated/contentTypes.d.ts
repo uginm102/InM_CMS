@@ -516,6 +516,12 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    links: Schema.Attribute.Component<'sections.icon-link', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

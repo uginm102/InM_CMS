@@ -12,6 +12,18 @@ export interface SectionsHeroBanner extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsIconLink extends Struct.ComponentSchema {
+  collectionName: 'components_sections_icon_links';
+  info: {
+    displayName: 'link';
+  };
+  attributes: {
+    iconClass: Schema.Attribute.String;
+    label: Schema.Attribute.String;
+    url: Schema.Attribute.String;
+  };
+}
+
 export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: 'components_shared_footers';
   info: {
@@ -36,6 +48,7 @@ declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
       'sections.hero-banner': SectionsHeroBanner;
+      'sections.icon-link': SectionsIconLink;
       'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
     }

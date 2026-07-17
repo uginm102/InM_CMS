@@ -55,6 +55,16 @@
       },
       "component": "sections.icon-link",
       "repeatable": true
+    },
+    "guides": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.guide",
+      "repeatable": true
     }
   }
 }

@@ -1,5 +1,18 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface SectionsGuide extends Struct.ComponentSchema {
+  collectionName: 'components_sections_guides';
+  info: {
+    displayName: 'guide';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    iconClass: Schema.Attribute.String;
+    tag: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SectionsHeroBanner extends Struct.ComponentSchema {
   collectionName: 'components_sections_hero_banners';
   info: {
@@ -47,6 +60,7 @@ export interface SharedHeader extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export namespace Public {
     export interface ComponentSchemas {
+      'sections.guide': SectionsGuide;
       'sections.hero-banner': SectionsHeroBanner;
       'sections.icon-link': SectionsIconLink;
       'shared.footer': SharedFooter;

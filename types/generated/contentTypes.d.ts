@@ -503,6 +503,12 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    guides: Schema.Attribute.Component<'sections.guide', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     header: Schema.Attribute.Component<'shared.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

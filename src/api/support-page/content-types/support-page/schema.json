@@ -15,6 +15,16 @@
     }
   },
   "attributes": {
+    "header": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.header",
+      "repeatable": false
+    },
     "hero": {
       "type": "component",
       "pluginOptions": {
@@ -25,6 +35,16 @@
       "component": "sections.hero-banner",
       "repeatable": false,
       "required": true
+    },
+    "footer": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "shared.footer",
+      "repeatable": false
     }
   }
 }

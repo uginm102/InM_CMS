@@ -533,6 +533,12 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::support-page.support-page'
     >;
+    popularLink: Schema.Attribute.Component<'sections.popular-articles', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

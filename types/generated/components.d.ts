@@ -37,6 +37,16 @@ export interface SectionsIconLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsPopularArticles extends Struct.ComponentSchema {
+  collectionName: 'components_sections_popular_articles';
+  info: {
+    displayName: 'popular-articles';
+  };
+  attributes: {
+    popularLink: Schema.Attribute.Component<'sections.icon-link', true>;
+  };
+}
+
 export interface SharedFooter extends Struct.ComponentSchema {
   collectionName: 'components_shared_footers';
   info: {
@@ -63,6 +73,7 @@ declare module '@strapi/strapi' {
       'sections.guide': SectionsGuide;
       'sections.hero-banner': SectionsHeroBanner;
       'sections.icon-link': SectionsIconLink;
+      'sections.popular-articles': SectionsPopularArticles;
       'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
     }

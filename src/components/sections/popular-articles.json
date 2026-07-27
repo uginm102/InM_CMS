@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_sections_popular_articles",
+  "info": {
+    "displayName": "popular-articles"
+  },
+  "options": {},
+  "attributes": {
+    "popularLink": {
+      "type": "component",
+      "component": "sections.icon-link",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

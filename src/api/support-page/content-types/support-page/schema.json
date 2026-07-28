@@ -56,7 +56,7 @@
       "component": "sections.guide",
       "repeatable": true
     },
-    "popularLink": {
+    "popularArticles": {
       "type": "component",
       "pluginOptions": {
         "i18n": {

@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "Service"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "iconClass": {
+      "type": "string"
+    },
+    "services": {
+      "type": "component",
+      "component": "sections.icon-link",
+      "repeatable": true
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Card Management",
+        "Transfers",
+        "Mobile Money",
+        "Loans",
+        "Utility Payments"
+      ]
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  },
+  "config": {}
+}

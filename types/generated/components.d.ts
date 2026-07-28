@@ -33,6 +33,7 @@ export interface SectionsIconLink extends Struct.ComponentSchema {
   attributes: {
     iconClass: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    slug: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };
 }
@@ -44,6 +45,31 @@ export interface SectionsPopularArticles extends Struct.ComponentSchema {
   };
   attributes: {
     popularLink: Schema.Attribute.Component<'sections.icon-link', true>;
+  };
+}
+
+export interface ServicesService extends Struct.ComponentSchema {
+  collectionName: 'components_services_services';
+  info: {
+    displayName: 'Service';
+  };
+  attributes: {
+    category: Schema.Attribute.Enumeration<
+      [
+        'Card Management',
+        'Transfers',
+        'Mobile Money',
+        'Loans',
+        'Utility Payments',
+      ]
+    >;
+    description: Schema.Attribute.Text;
+    iconClass: Schema.Attribute.String;
+    services: Schema.Attribute.Component<'sections.icon-link', true>;
+    slug: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -74,6 +100,7 @@ declare module '@strapi/strapi' {
       'sections.hero-banner': SectionsHeroBanner;
       'sections.icon-link': SectionsIconLink;
       'sections.popular-articles': SectionsPopularArticles;
+      'services.service': ServicesService;
       'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
     }

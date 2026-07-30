@@ -54,22 +54,34 @@ export interface ServicesService extends Struct.ComponentSchema {
     displayName: 'Service';
   };
   attributes: {
-    category: Schema.Attribute.Enumeration<
-      [
-        'Card Management',
-        'Transfers',
-        'Mobile Money',
-        'Loans',
-        'Utility Payments',
-      ]
-    >;
     description: Schema.Attribute.Text;
     iconClass: Schema.Attribute.String;
     services: Schema.Attribute.Component<'sections.icon-link', true>;
-    slug: Schema.Attribute.String &
-      Schema.Attribute.Required &
-      Schema.Attribute.Unique;
     title: Schema.Attribute.String;
+  };
+}
+
+export interface ServicesStep extends Struct.ComponentSchema {
+  collectionName: 'components_services_steps';
+  info: {
+    displayName: 'Step';
+  };
+  attributes: {
+    description: Schema.Attribute.Text & Schema.Attribute.Required;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      >;
+    screenshot: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    > &
+      Schema.Attribute.Required;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -101,6 +113,7 @@ declare module '@strapi/strapi' {
       'sections.icon-link': SectionsIconLink;
       'sections.popular-articles': SectionsPopularArticles;
       'services.service': ServicesService;
+      'services.step': ServicesStep;
       'shared.footer': SharedFooter;
       'shared.header': SharedHeader;
     }

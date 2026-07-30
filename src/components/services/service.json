@@ -18,21 +18,6 @@
       "type": "component",
       "component": "sections.icon-link",
       "repeatable": true
-    },
-    "category": {
-      "type": "enumeration",
-      "enum": [
-        "Card Management",
-        "Transfers",
-        "Mobile Money",
-        "Loans",
-        "Utility Payments"
-      ]
-    },
-    "slug": {
-      "type": "string",
-      "required": true,
-      "unique": true
     }
   },
   "config": {}

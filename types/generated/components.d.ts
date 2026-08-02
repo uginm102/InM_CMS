@@ -70,7 +70,6 @@ export interface ServicesStep extends Struct.ComponentSchema {
     description: Schema.Attribute.Text & Schema.Attribute.Required;
     order: Schema.Attribute.Integer &
       Schema.Attribute.Required &
-      Schema.Attribute.Unique &
       Schema.Attribute.SetMinMax<
         {
           min: 1;

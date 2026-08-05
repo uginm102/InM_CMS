@@ -38,16 +38,6 @@ export interface SectionsIconLink extends Struct.ComponentSchema {
   };
 }
 
-export interface SectionsPopularArticles extends Struct.ComponentSchema {
-  collectionName: 'components_sections_popular_articles';
-  info: {
-    displayName: 'popular-articles';
-  };
-  attributes: {
-    popularLink: Schema.Attribute.Component<'sections.icon-link', true>;
-  };
-}
-
 export interface ServicesService extends Struct.ComponentSchema {
   collectionName: 'components_services_services';
   info: {
@@ -110,7 +100,6 @@ declare module '@strapi/strapi' {
       'sections.guide': SectionsGuide;
       'sections.hero-banner': SectionsHeroBanner;
       'sections.icon-link': SectionsIconLink;
-      'sections.popular-articles': SectionsPopularArticles;
       'services.service': ServicesService;
       'services.step': ServicesStep;
       'shared.footer': SharedFooter;

@@ -46,6 +46,14 @@
       "component": "sections.icon-link",
       "repeatable": true
     },
+    "guidesTitle": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
     "guides": {
       "type": "component",
       "pluginOptions": {
@@ -63,7 +71,7 @@
           "localized": true
         }
       },
-      "component": "sections.popular-articles",
+      "component": "sections.icon-link",
       "repeatable": true
     },
     "footer": {

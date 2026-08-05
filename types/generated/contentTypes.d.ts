@@ -625,6 +625,12 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
           localized: true;
         };
       }>;
+    guidesTitle: Schema.Attribute.String &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     header: Schema.Attribute.Component<'shared.header', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -649,10 +655,7 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::support-page.support-page'
     >;
-    popularArticles: Schema.Attribute.Component<
-      'sections.popular-articles',
-      true
-    > &
+    popularArticles: Schema.Attribute.Component<'sections.icon-link', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

@@ -83,6 +83,16 @@
       },
       "component": "shared.footer",
       "repeatable": false
+    },
+    "mobileAppDownload": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.mobile-app-download",
+      "repeatable": false
     }
   }
 }

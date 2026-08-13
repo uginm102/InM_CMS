@@ -38,6 +38,25 @@ export interface SectionsIconLink extends Struct.ComponentSchema {
   };
 }
 
+export interface SectionsMobileAppDownload extends Struct.ComponentSchema {
+  collectionName: 'components_sections_mobile_app_downloads';
+  info: {
+    displayName: 'Mobile App Download';
+  };
+  attributes: {
+    appStoreLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'App Store'>;
+    appStorePrefix: Schema.Attribute.String;
+    appStoreUrl: Schema.Attribute.String;
+    infoText: Schema.Attribute.String;
+    playStoreLabel: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Google Play'>;
+    playStorePrefix: Schema.Attribute.String;
+    playStoreUrl: Schema.Attribute.String;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface ServicesService extends Struct.ComponentSchema {
   collectionName: 'components_services_services';
   info: {
@@ -100,6 +119,7 @@ declare module '@strapi/strapi' {
       'sections.guide': SectionsGuide;
       'sections.hero-banner': SectionsHeroBanner;
       'sections.icon-link': SectionsIconLink;
+      'sections.mobile-app-download': SectionsMobileAppDownload;
       'services.service': ServicesService;
       'services.step': ServicesStep;
       'shared.footer': SharedFooter;

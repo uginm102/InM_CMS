@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_sections_mobile_app_downloads",
+  "info": {
+    "displayName": "Mobile App Download"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "infoText": {
+      "type": "string"
+    },
+    "appStoreUrl": {
+      "type": "string"
+    },
+    "appStorePrefix": {
+      "type": "string"
+    },
+    "appStoreLabel": {
+      "type": "string",
+      "default": "App Store"
+    },
+    "playStoreUrl": {
+      "type": "string"
+    },
+    "playStorePrefix": {
+      "type": "string"
+    },
+    "playStoreLabel": {
+      "type": "string",
+      "default": "Google Play"
+    }
+  },
+  "config": {}
+}

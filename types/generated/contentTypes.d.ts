@@ -655,6 +655,15 @@ export interface ApiSupportPageSupportPage extends Struct.SingleTypeSchema {
       'oneToMany',
       'api::support-page.support-page'
     >;
+    mobileAppDownload: Schema.Attribute.Component<
+      'sections.mobile-app-download',
+      false
+    > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     popularArticles: Schema.Attribute.Component<'sections.icon-link', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {

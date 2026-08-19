@@ -12,14 +12,14 @@ const config: Core.Config.Middlewares = [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
+            'market-assets.strapi.io',
             'res.cloudinary.com', // Whitelist Cloudinary images
           ],
           'media-src': [
             "'self'",
             'data:',
             'blob:',
-            'dl.airtable.com',
+            'market-assets.strapi.io',
             'res.cloudinary.com', // Whitelist Cloudinary videos/audio
           ],
           upgradeInsecureRequests: null,
@@ -29,7 +29,7 @@ const config: Core.Config.Middlewares = [
   },
   'strapi::logger',
   'strapi::errors',
-  'strapi::security',
+  // 'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::query',

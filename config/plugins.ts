@@ -22,7 +22,10 @@ const deniedExecutableTypes = [
   'application/x-mach-binary',
 ];
 
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
+const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => {
+  const isProduction = env('NODE_ENV') === 'production';
+
+  return {
   'users-permissions': {
     config: {
       jwtManagement: 'refresh',
@@ -39,6 +42,8 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
       },
 
       // Cloudinary configuration
+      // Only spread the Cloudinary config if we are in production
+        ...(isProduction && {
       provider: 'cloudinary',
       providerOptions: {
         cloud_name: env('CLOUDINARY_NAME'),
@@ -52,9 +57,10 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
         },
         delete: {},
       },
+    }),
 
     },
   },
-});
+}};
 
 export default config;

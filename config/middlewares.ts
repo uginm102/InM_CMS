@@ -1,6 +1,32 @@
 import type { Core } from '@strapi/strapi';
 
 const config: Core.Config.Middlewares = [
+  {
+    name: 'strapi::security',
+    config: {
+      contentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'connect-src': ["'self'", 'https:'],
+          'img-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'res.cloudinary.com', // Whitelist Cloudinary images
+          ],
+          'media-src': [
+            "'self'",
+            'data:',
+            'blob:',
+            'dl.airtable.com',
+            'res.cloudinary.com', // Whitelist Cloudinary videos/audio
+          ],
+          upgradeInsecureRequests: null,
+        },
+      },
+    },
+  },
   'strapi::logger',
   'strapi::errors',
   'strapi::security',

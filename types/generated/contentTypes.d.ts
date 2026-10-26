@@ -478,6 +478,44 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiPopularArticlePopularArticle
+  extends Struct.SingleTypeSchema {
+  collectionName: 'popular_articles';
+  info: {
+    displayName: 'Popular Articles';
+    pluralName: 'popular-articles';
+    singularName: 'popular-article';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  pluginOptions: {
+    i18n: {
+      localized: true;
+    };
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    links: Schema.Attribute.Component<'sections.icon-link', true> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
+    locale: Schema.Attribute.String;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::popular-article.popular-article'
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiServiceGuideServiceGuide
   extends Struct.CollectionTypeSchema {
   collectionName: 'service_guides';
@@ -1189,6 +1227,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::popular-article.popular-article': ApiPopularArticlePopularArticle;
       'api::service-guide.service-guide': ApiServiceGuideServiceGuide;
       'api::service.service': ApiServiceService;
       'api::support-page.support-page': ApiSupportPageSupportPage;

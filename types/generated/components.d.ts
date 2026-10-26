@@ -33,6 +33,14 @@ export interface SectionsIconLink extends Struct.ComponentSchema {
   attributes: {
     iconClass: Schema.Attribute.String;
     label: Schema.Attribute.String;
+    order: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 1;
+        },
+        number
+      > &
+      Schema.Attribute.DefaultTo<1>;
     slug: Schema.Attribute.String;
     url: Schema.Attribute.String;
   };

@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "popular_articles",
+  "info": {
+    "singularName": "popular-article",
+    "pluralName": "popular-articles",
+    "displayName": "Popular Articles"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "links": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "sections.icon-link",
+      "repeatable": true
+    }
+  }
+}

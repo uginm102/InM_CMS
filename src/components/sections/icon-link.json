@@ -16,6 +16,11 @@
     },
     "slug": {
       "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 1,
+      "min": 1
     }
   },
   "config": {}

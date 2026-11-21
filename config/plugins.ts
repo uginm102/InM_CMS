@@ -73,7 +73,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
           actionOptions: {
             upload: {},
             uploadStream: {
-              folder: 'wendi-strapi-production',
+              folder: 'inm-strapi-production',
             },
             delete: {},
           },

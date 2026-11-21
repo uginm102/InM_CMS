@@ -37,7 +37,7 @@ yarn build
 ```
 sudo npm install -g pm2
 
-pm2 start npm --name InMStrapi -- run start
+pm2 start npm --name WendiStrapi -- run start
 pm2 save
 ```
 <sub>🤫 Psst! [Strapi is hiring](https://strapi.io/careers).</sub>

@@ -64,16 +64,6 @@
       "component": "sections.guide",
       "repeatable": true
     },
-    "popularArticles": {
-      "type": "component",
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "component": "sections.icon-link",
-      "repeatable": true
-    },
     "footer": {
       "type": "component",
       "pluginOptions": {
